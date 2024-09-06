@@ -90,7 +90,7 @@
     flex-direction: row;
     align-items: center;
     height: 30px;
-    width: 213px;
+    width: 250px;
     opacity: 0;
 }
 .room-card.booked .discount {
@@ -226,6 +226,16 @@
     flex-direction: column;
     margin-right: 27px;
 }
+/* .price__header {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+} */
 .price__header {
     font-family: 'Open Sans';
     font-style: normal;
@@ -235,6 +245,7 @@
     display: flex;
     align-items: center;
     color: #FFFFFF;
+    width: 110px;
 }
 .price__description {
     display: flex;
