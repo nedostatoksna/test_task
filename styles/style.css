@@ -83,6 +83,16 @@
 .room-card.available:hover {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
 }
+/* .room-card.available .discount {
+    position: absolute;
+    top: -80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 30px;
+    width: 213px;
+    opacity: 0;
+} */
 .room-card.available .discount {
     position: absolute;
     top: -80%;
@@ -90,7 +100,7 @@
     flex-direction: row;
     align-items: center;
     height: 30px;
-    width: 250px;
+    width: 213px;
     opacity: 0;
 }
 .room-card.booked .discount {
@@ -245,7 +255,7 @@
     display: flex;
     align-items: center;
     color: #FFFFFF;
-    width: 110px;
+    width: 130px;
 }
 .price__description {
     display: flex;
