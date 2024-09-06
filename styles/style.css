@@ -99,14 +99,12 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 30px;
-    width: 213px;
     opacity: 0;
 }
 .room-card.booked .discount {
     display: none;
 }
-.discount__text {
+/* .discount__text {
     height: 30px;
     padding: 4px 4px 4px 16px;
     border-radius: 3px 0px 0px 3px;
@@ -119,12 +117,33 @@
     align-items: center;
     color: #FFFFFF;
     background: #FF7647;
+} */
+.discount__text {
+    height: 30px;
+    width: 190px;
+    padding: 4px 4px 4px 16px;
+    border-radius: 3px 0px 0px 3px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    background: #FF7647;
 }
-.discount__icon {
+/* .discount__icon {
     position: absolute;
     height: 30px;
     width: 213px;
     background: url(../img/icon-discount.svg) center left 173px no-repeat;
+} */
+.discount__icon {
+    position: absolute;
+    height: 30px;
+    width: 230px;
+    background: url(../img/icon-discount.svg) center left 183px no-repeat;
 }
 .room-card:hover .discount {
     opacity: 100%;
