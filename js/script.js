@@ -1,5 +1,5 @@
 const roomCardsGroup = document.querySelectorAll('.room-card');
-const roomTitles = document.querySelectorAll('.room-description__title');
+const roomTitles = document.querySelectorAll('.room-description__link');
 
 roomCardsGroup.forEach(card => {
     const button = card.querySelector('.price-and-book__button');

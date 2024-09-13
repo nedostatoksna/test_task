@@ -132,26 +132,33 @@
 .room-card:hover .discount {
     opacity: 1;
 }
-.room-photo-cover {
-    background-image: linear-gradient(180deg, rgba(10, 34, 64, 0.1) 0%, #0A2240 100%);
-    border-radius: 10px;
-    position: absolute;
-    top: 0;
-    left: 0; 
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-.room-card.booked .room-photo-cover__light {
-    background: rgba(255, 255, 255, 0.4);
-    border-radius: 10px;
+/* Псевдоэлемент для затемнения (аналог room-photo-cover) */
+.room-card::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    background-image: linear-gradient(180deg, rgba(10, 34, 64, 0.1) 0%, #0A2240 100%);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+/* Псевдоэлемент для светлого наложения (аналог room-photo-cover__light) */
+.room-card.booked::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
     z-index: 2;
 }
+
+/* Элемент для отображения состояния брони (аналог room-photo-cover__booked) */
 .room-card.booked .room-photo-cover__booked {
     background: #3C3E43;
     border-bottom-right-radius: 13px;
