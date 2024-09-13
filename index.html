@@ -1,39 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
 	 <meta charset="utf-8">
 	 <meta name="viewport" content="width=device-width">
-	 <link rel="stylesheet" type="text/css" href="./styles/style.css">
 	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-	 <title>test-task-margarita-zhentsova</title>
+	 <link rel="stylesheet" type="text/css" href="./styles/style.css">
+	 <title>Rooms and Prices</title>
 </head>
 	<body class="body">
 		<main class="main">
-			<div class="header">
-				<h1 class="rooms-header">Hомера и цены</h1>
-			</div>
-			<section class="room-cards">
-				<div class="room-card available">
+			<h1 class="rooms-header">Hомера и цены</h1>
+			<ul class="room-cards">
+				<li class="room-card">
 					<div class="room-photo-cover"></div>
-					<div class="room-photo-cover_light"></div>
-					<div class="room-photo-cover_booked"></div>
-					<img class="room-photo" src="./img/room-lux-pic.svg">
-					<div class="room-card__content lux-room__content"> 
+					<div class="room-photo-cover__light"></div>
+					<div class="room-photo-cover__booked"></div>
+					<picture>
+						<source 
+							srcset="./img/room-lux-pic-mobile.jpg 768w, 
+									./img/room-lux-pic-tablet.jpg 1280w, 
+									./img/room-lux-pic-desktop.jpg 100vw"
+							sizes="(max-width: 768px) 288px, 
+								   (max-width: 1280px) 336px, 
+								   (max-width: 100vw) 372px"
+							type="image/jpeg">
+						<img 
+							class="room-photo" 
+							src="./img/room-lux-pic-desktop.jpg" 
+							width="372px"
+							height="372px"
+							alt="Представительский люкс">
+					</picture>
+					<div class="room-card__content room-card__content_lux"> 
 						<div class="room-description">
-							<a href="#no_scroll" class="room-description__title">Представительский люкс</a>
-							<p class="room-description__text">Эксклюзивный номер с панорамным видом на центр города Москвы</p>
+							<h2 class="room-description__title">
+								<a href="#room1" class="room-description__link" data-room="1">Представительский люкс</a>
+							</h2>
+							<p class="room-description__text">
+								Эксклюзивный номер с панорамным видом на центр города Москвы 
+							</p>
 						</div>
-						<hr class="divider"/>
 						<div class="price-and-book">
-							<div class="price-and-book__price">
-								<h3 class="price__header">Цена за сутки</h3>
+							<div class="price">
+								<div class="price__header">Цена за сутки</div>
 								<div class="price__description">
-									<span class="description__from">от</span>
-									<div class="description__number">7 900</div>
-									<span class="description__currency">₽</span>
+									<span class="price__description-from">от</span>
+									<span class="price__description-number">7 900</span>
+									<span class="price__description-currency">₽</span>
 								</div>
 							</div>
-							<button class="book">Забронировать</button>
+							<button class="price-and-book__button">Забронировать</button>
 						</div>
 						<div class="room-booked">
 							<p class="room-booked__text">Номер зарезервирован</p>
@@ -43,32 +59,47 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="room-card available">
+				</li>
+				<li class="room-card">
 					<div class="room-photo-cover"></div>
-					<div class="room-photo-cover_light"></div>
-					<div class="room-photo-cover_booked"></div>
-					<img class="room-photo" src="./img/room-duplex-pic.svg">
+					<div class="room-photo-cover__light"></div>
+					<div class="room-photo-cover__booked"></div>
+					<picture>
+						<source 
+							srcset="./img/room-duplex-pic-mobile.jpg 768w, 
+									./img/room-duplex-pic-tablet.jpg 1280w, 
+									./img/room-duplex-pic-desktop.jpg 100vw"
+							sizes="(max-width: 768px) 288px, 
+								   (max-width: 1280px) 336px, 
+								   100vw"
+							type="image/jpeg">
+						<img 
+							class="room-photo" 
+							src="./img/room-duplex-pic-desktop.jpg" 
+							width="372px"
+							alt="Дуплекс">
+					</picture>
 					<div class="room-card__content"> 
 						<div class="discount">
 							<div class="discount__text">Гарантия лучшей цены!</div>
 							<div class="discount__icon"></div>
 						</div>
 						<div class="room-description">
-							<a href="#no_scroll" class="room-description__title">Дуплекс</a>
+							<h2 class="room-description__title">
+								<a href="#room2" class="room-description__link" data-room="2">Дуплекс</a>
+							</h2>
 							<p class="room-description__text">Просторный двухкомнатный номер с шикарным видом на парк</p>
 						</div>
-						<hr class="divider"/>
 						<div class="price-and-book">
-							<div class="price-and-book__price">
-								<h3 class="price__header">Цена за сутки</h3>
+							<div class="price">
+								<div class="price__header">Цена за сутки</div>
 								<div class="price__description">
-									<span class="description__from">от</span>
-									<p class="description__number">5 700</p>
-									<span class="description__currency">₽</span>
+									<span class="price__description-from">от</span>
+									<span class="price__description-number">5 700</span>
+									<span class="price__description-currency">₽</span>
 								</div>
 							</div>
-							<button class="book">Забронировать</button>
+							<button class="price-and-book__button">Забронировать</button>
 						</div>
 						<div class="room-booked">
 							<p class="room-booked__text">Номер зарезервирован</p>
@@ -78,28 +109,43 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="room-card available">
+				</li>
+				<li class="room-card">
 					<div class="room-photo-cover"></div>
-					<div class="room-photo-cover_light"></div>
-					<div class="room-photo-cover_booked"></div>
-					<img class="room-photo" src="./img/room-business-pic.svg">
-					<div class="room-card__content business-room__content"> 
+					<div class="room-photo-cover__light"></div>
+					<div class="room-photo-cover__booked"></div>
+					<picture>
+						<source 
+							srcset="./img/room-business-pic-mobile.jpg 768w, 
+									./img/room-business-pic-tablet.jpg 1280w, 
+									./img/room-business-pic-desktop.jpg 100vw"
+							sizes="(max-width: 768px) 288px, 
+								   (max-width: 1280px) 336px, 
+								   100vw"
+							type="image/jpeg">
+						<img 
+							class="room-photo" 
+							src="./img/room-business-pic-desktop.jpg" 
+							width="372px"
+							alt="Бизнес-люкс">
+					</picture>
+					<div class="room-card__content room-card__content_business"> 
 						<div class="room-description">
-							<a href="#no_scroll" class="room-description__title">Бизнес-люкс</a>
+							<h2 class="room-description__title">
+								<a href="#room3" class="room-description__link" data-room="3">Бизнес-люкс</a>
+							</h2>
 							<p class="room-description__text">Трёхкомнатный номер с панорамным видом на Москва-реку</p>
 						</div>
-						<hr class="divider"/>
 						<div class="price-and-book">
-							<div class="price-and-book__price">
-								<h3 class="price__header">Цена за сутки</h3>
+							<div class="price">
+								<div class="price__header">Цена за сутки</div>
 								<div class="price__description">
-									<span class="description__from">от</span>
-									<p class="description__number">4 900</p>
-									<span class="description__currency">₽</span>
+									<span class="price__description-from">от</span>
+									<span class="price__description-number">4 900</span>
+									<span class="price__description-currency">₽</span>
 								</div>
 							</div>
-							<button class="book">Забронировать</button>
+							<button class="price-and-book__button">Забронировать</button>
 						</div>
 						<div class="room-booked">
 							<p class="room-booked__text">Номер зарезервирован</p>
@@ -109,72 +155,9 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="room-card available">
-					<div class="room-photo-cover"></div>
-					<div class="room-photo-cover_light"></div>
-					<div class="room-photo-cover_booked"></div>
-					<img class="room-photo" src="./img/room-business-pic.svg">
-					<div class="room-card__content business-room__content"> 
-						<div class="room-description">
-							<a href="#no_scroll" class="room-description__title">Бизнес-люкс</a>
-							<p class="room-description__text">Трёхкомнатный номер с панорамным видом на Москва-реку</p>
-						</div>
-						<hr class="divider"/>
-						<div class="price-and-book">
-							<div class="price-and-book__price">
-								<h3 class="price__header">Цена за сутки</h3>
-								<div class="price__description">
-									<span class="description__from">от</span>
-									<p class="description__number">4 900</p>
-									<span class="description__currency">₽</span>
-								</div>
-							</div>
-							<button class="book">Забронировать</button>
-						</div>
-						<div class="room-booked">
-							<p class="room-booked__text">Номер зарезервирован</p>
-							<div class="room-booked__text-wrapper">
-								<p class="room-booked__text">Перейти к</p>
-								<a class="room-booked__link">оплате</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="room-card available">
-					<div class="room-photo-cover"></div>
-					<div class="room-photo-cover_light"></div>
-					<div class="room-photo-cover_booked"></div>
-					<img class="room-photo" src="./img/room-business-pic.svg">
-					<div class="room-card__content business-room__content"> 
-						<div class="room-description">
-							<a href="#no_scroll" class="room-description__title">Бизнес-люкс</a>
-							<p class="room-description__text">Трёхкомнатный номер с панорамным видом на Москва-реку</p>
-						</div>
-						<hr class="divider"/>
-						<div class="price-and-book">
-							<div class="price-and-book__price">
-								<h3 class="price__header">Цена за сутки</h3>
-								<div class="price__description">
-									<span class="description__from">от</span>
-									<p class="description__number">4 900</p>
-									<span class="description__currency">₽</span>
-								</div>
-							</div>
-							<button class="book">Забронировать</button>
-						</div>
-						<div class="room-booked">
-							<p class="room-booked__text">Номер зарезервирован</p>
-							<div class="room-booked__text-wrapper">
-								<p class="room-booked__text">Перейти к</p>
-								<a class="room-booked__link">оплате</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+				</li>
+			</ul>
 		</main>
-		<script src="./js/book.js"></script>
-		<script src="./js/unbook.js"></script>
+		<script src="./js/script.js"></script>
     </body>
 </html>
