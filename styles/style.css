@@ -132,7 +132,6 @@
 .room-card:hover .discount {
     opacity: 1;
 }
-/* Псевдоэлемент для затемнения (аналог room-photo-cover) */
 .room-card::before {
     content: '';
     position: absolute;
@@ -144,8 +143,6 @@
     border-radius: 10px;
     z-index: 1;
 }
-
-/* Псевдоэлемент для светлого наложения (аналог room-photo-cover__light) */
 .room-card.booked::after {
     content: '';
     position: absolute;
@@ -155,19 +152,24 @@
     height: 100%;
     background: rgba(255, 255, 255, 0.4);
     border-radius: 10px;
-    z-index: 2;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(234, 234, 234, 0.5) 0%, rgba(10, 34, 64, 1) 100%);
 }
-
-/* Элемент для отображения состояния брони (аналог room-photo-cover__booked) */
-.room-card.booked .room-photo-cover__booked {
-    background: #3C3E43;
-    border-bottom-right-radius: 13px;
-    border-bottom-left-radius: 13px;
+.room-card.booked::before {
+    content: '';
     position: absolute;
-    top: 277px;
-    left: 0;
+    top: 276px;
     width: 100%;
     height: 94px;
+    background: #3C3E43;
+    border-radius: 0%;
+    border-bottom-right-radius: 13px;
+    border-bottom-left-radius: 13px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
     z-index: 3;
 }
 .room-card.booked .price-and-book {
@@ -459,6 +461,10 @@
         margin-right: 4px;
         width: 65px;
     }
+    .room-card.booked::before {
+        top: 256px;
+        height: 165px;
+    }
 }
 /* mobile */
 @media (max-width: 767px) {
@@ -484,9 +490,13 @@
         width: 288px;
         height: 347px;
     }
-    .room-card.booked .room-photo-cover__booked {
+    /* .room-card.booked .room-photo-cover__booked {
         top: 310px;
         height: 114px;
+    } */
+    .room-card.booked::before {
+        top: 198px;
+        height: 150px;
     }
     .room-description__title {
         width: 246px;
