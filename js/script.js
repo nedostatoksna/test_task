@@ -22,11 +22,7 @@ roomCardsGroup.forEach(card => {
 // unbook by click
 roomCardsGroup.forEach(card => {
     card.addEventListener('click', (event) => {
-        const targetClassesToExclude = event.target.classList.contains('price-and-book__button') 
-            || event.target.classList.contains('room-booked') 
-            || event.target.classList.contains('room-booked__text')
-            || event.target.classList.contains('room-booked__text-wrapper')
-            || event.target.classList.contains('room-booked__link');
+        const targetClassesToExclude = event.target.classList.contains('room-booked__link');
             
         if (targetClassesToExclude) {
             return;  
