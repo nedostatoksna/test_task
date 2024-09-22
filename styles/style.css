@@ -9,7 +9,7 @@
 /*common styles*/
 @font-face {
     font-family: 'Open Sans';
-    font-weight: 100 700; /* Переменный шрифт поддерживает диапазон весов */
+    font-weight: 100 700; 
     font-style: normal;
     src: url("../fonts/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
     font-display: swap;
